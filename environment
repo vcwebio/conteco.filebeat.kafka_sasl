@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+export CONTECO_LABEL="filebeat.kafka_sasl - ContEco"
+export CONTECO_DESCRIPTION="Filebeat image with Kafka input and sasl output, with templated default configuration."
+
+export CONTECO_TYPE="filebeat"
+export CONTECO_NAME="kafka_sasl"
+export CONTECO_TAG="7.8.0"
+
+export CONTECO_BASE="external.filebeat:7.8.0"
+export CONTECO_BUILD="image-base"
