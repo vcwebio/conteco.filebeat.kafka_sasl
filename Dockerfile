@@ -16,7 +16,7 @@ RUN chmod -R 555 /conteco
 ##### END image/Dockerfile/conteco #####
 
 ##### BEGIN image/Dockerfile/build-instructions #####
-ENV CONTECO_ENTRYPOINT "/conteco/bin/filebeat/base/docker-entrypoint"
+ENV CONTECO_ENTRYPOINT "/conteco/bin/filebeat/kafka_sasl/docker-entrypoint"
 COPY ./conteco/configs/usr/share/filebeat/filebeat.yml /usr/share/filebeat/filebeat.yml
 #USER filebeat
 ##### END image/Dockerfile/build-instructions #####
@@ -39,5 +39,5 @@ LABEL $CONTECO_LABELSPACE.schema-version="1.0" \
       $CONTECO_LABELSPACE.build="$CONTECO_BUILD" \
       $CONTECO_LABELSPACE.label="$CONTECO_LABEL" \
       $CONTECO_LABELSPACE.description="$CONTECO_DESCRIPTION" \
-      $CONTECO_LABELSPACE.docker.cmd.help="docker run ${CONTECO_REALM_RUNTIME}/${CONTECO_ECOSYSTEM_RUNTIME}.${CONTECO_TYPE}.${CONTECO_NAME} --help" 
+      $CONTECO_LABELSPACE.docker.cmd.help="docker run ${CONTECO_REALM_RUNTIME}/${CONTECO_ECOSYSTEM_RUNTIME}.${CONTECO_TYPE}.${CONTECO_NAME} --help"
 ##### END image.base/Dockerfile/env-labels-footer #####

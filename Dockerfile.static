@@ -16,7 +16,7 @@ RUN chmod -R 555 /conteco
 ##### END image/Dockerfile/conteco #####
 
 ##### BEGIN image/Dockerfile/build-instructions #####
-ENV CONTECO_ENTRYPOINT "/conteco/bin/filebeat/base/docker-entrypoint"
+ENV CONTECO_ENTRYPOINT "/conteco/bin/filebeat/kafka_sasl/docker-entrypoint"
 COPY ./conteco/configs/usr/share/filebeat/filebeat.yml /usr/share/filebeat/filebeat.yml
 #USER filebeat
 ##### END image/Dockerfile/build-instructions #####
@@ -39,5 +39,5 @@ LABEL io.vcweb.schema-version="1.0" \
       io.vcweb.build="image-base" \
       io.vcweb.label="filebeat.kafka_sasl - ContEco" \
       io.vcweb.description="Filebeat image with Kafka input and sasl output, with templated default configuration." \
-      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.filebeat.kafka_sasl --help" 
+      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.filebeat.kafka_sasl --help"
 ##### END image.base/Dockerfile/env-labels-footer #####
