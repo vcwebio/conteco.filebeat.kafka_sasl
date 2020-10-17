@@ -5,7 +5,7 @@ export CONTECO_DESCRIPTION="Filebeat image with Kafka input and sasl output, wit
 
 export CONTECO_TYPE="filebeat"
 export CONTECO_NAME="kafka_sasl"
-export CONTECO_TAG="7.8.0"
+export CONTECO_TAG="7.9.2"
 
-export CONTECO_BASE="external.filebeat:7.8.0"
+export CONTECO_BASE="external.filebeat:7.9.2"
 export CONTECO_BUILD="image-base"
